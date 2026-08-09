@@ -125,7 +125,7 @@ export default function App() {
 
   return (
     <Shell>
-      <div className="w-full h-full min-h-[400px]">
+      <div className="w-full h-full">
         <canvas ref={canvasRef} className="w-full h-full" />
       </div>
     </Shell>
