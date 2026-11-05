@@ -1,3 +1,4 @@
+import { GameShell, GameTopbar } from "@freegamestore/games";
 import { useEffect, useRef } from "react";
 import {
   Actor,
@@ -13,7 +14,6 @@ import {
   Timer,
   vec,
 } from "excalibur";
-import { Shell } from "./components/Shell";
 
 // A complete, playable reference game on Excalibur.js. It demonstrates every
 // pattern you need: an Actor subclass with a graphic, keyboard + pointer input,
@@ -124,10 +124,10 @@ export default function App() {
   }, []);
 
   return (
-    <Shell>
+    <GameShell topbar={<GameTopbar title="APPNAME" showScore={false} />}>
       <div className="w-full h-full">
         <canvas ref={canvasRef} className="w-full h-full" />
       </div>
-    </Shell>
+    </GameShell>
   );
 }
